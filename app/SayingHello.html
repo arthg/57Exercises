@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="sayingHelloApp" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saying Hello</title>
+</head>
+<body ng-cloak>
+
+    <div ng-controller="SayingHelloController">
+        <label for="name">Name:</label>
+        <input id="name" type="text" ng-model="name" ng-change="nameChanged()" placeholder="What is your name?" />
+
+        <span>{{greeting}}</span>
+        <br/>
+        <button type="submit" ng-disabled="name.length<1" ng-click="greet()">Click</button>
+        <br/>
+        <br/>
+        <input id="inputString" type="text" ng-model="inputString" ng-change="inputStringChanged()" placeholder="What is the input string?" />
+        <span>{{inputStringLength}}</span>
+    </div>
+
+    <script src="/lib/angular/angular.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/controllers/sayingHelloController.js"></script>
+    <script src="/js/services/greetingService.js"></script>
+</body>
+</html>
