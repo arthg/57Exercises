@@ -17,6 +17,7 @@ module.exports = function(config) {
       'lib/angular/angular.js',
       'lib/angular/angular-*.js',
       '../tests/lib/angular-mocks.js',
+      '../tests/lib/sinon-1.15.0.js',
       'js/**/*.js',
       '../tests/unit/**/*.js'
     ],
@@ -60,7 +61,11 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['Chrome'],
 
-
+    plugins : [
+      'karma-chrome-launcher',
+      'karma-jasmine',
+      'karma-ng-html2js-preprocessor'
+    ],
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: false,

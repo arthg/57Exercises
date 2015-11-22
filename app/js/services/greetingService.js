@@ -1,3 +1,5 @@
+'use strict';
+
 sayingHelloApp.factory('greetingService', function () {
     return {
         getGreeting: function (name) {
